@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --varAzzChiaro: #4585E6;
+    --varAzzScuro: #005AE0;
+    --sfondoPagina: white;
+    --testo: black;
+    --SfondoIntestazione: #cfe2ff;
+    --Evidenziatore: rgba(48, 210, 254, 0.5);
+}
+
+body{
+    background-color: var(--sfondoPagina);
+    color: var(--testo);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+    font-size: 100px;
+    margin: 0px;
+}
+
+h1+label{
+    font-family: 'Spartan', sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+
+header{
+    padding-bottom: 80px;
+    padding-top: 80px;
+    box-shadow: 0 0px 40px 50px var(--Evidenziatore);
+    margin-bottom: 90px;
+    background-color: var(--Evidenziatore);
+}
+
+header>label{
+    color: black;
+}
+
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h2{
+    font-family: 'Spartan', sans-serif;
+    font-size: 30px;
+    clear: both;
+}
+
+p{
+    line-height: 30px;
+}
+
+section, nav{
+    padding-top: 10px;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+#tabellaDesktop{
+    display: table;
+}
+#tabelleMobile{
+    display: none;
+}
+#tabelleMobile>table{
+    margin-bottom: 30px;
+}
+
+img.immagine{
+    border-radius: 10px;
+}
+
+figure{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    box-sizing: border-box;
+    display: block;
+}
+
+figure>a>img{
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 574px;
+}
+
+figcaption{
+    font-style: italic;
+}
+
+#fotoFasa{
+    float: left;
+    height: 300px;
+}
+#fotoLollo{
+    float: right;
+    height: 300px;
+}
+
+#TabelloneStelle{}
+
+#MiglioramentoPiazzale{
+	display: none;
+}
+
+.rosso{
+    color: red;
+}
+
+.azzChiaro{
+    color: var(--varAzzChiaro);
+}
+
+.azzScuro{
+    color: var(--varAzzScuro);
+}
+
+.verdeAcceso{
+    color: #36FF00;
+}
+.verde{
+    color: #AEFF00;
+}
+
+.grassetto{
+    font-weight: bold;
+}
+.corsivo{
+    font-style: italic;
+}
+
+a:link, a:visited{
+    color: var(--testo);
+    cursor: pointer;
+}
+a:hover{
+    font-weight: bold;
+    text-shadow: 0px 0px 5px white;
+}
+
+.rosso>a:link, .rosso>a:visited{
+    color: red;
+    cursor: pointer;
+}
+
+#linkMiglioramentoPiazzale{
+    font-weight: bold;
+}
+
+body>footer{
+    background-color: var(--Evidenziatore);
+    margin: 0px;
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+body>footer>p{
+    text-align: center;
+    margin: 0px;
+}
+
+footer>p{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+li {
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+#studiareNonBasta{
+    width: 800px;
+    height: 450px;
+    /*width: 560px;
+    height: 315px;*/
+}
+
+/* Evidenziamento */
+.eviChiaro::before{
+    background-color: rgba(48, 210, 254, 0.5);
+}
+
+@media only screen and (max-width: 612px){
+    #tabellaDesktop{
+        display: none;
+    }
+    #tabelleMobile{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 578px){
+    #fotoFasa, #fotoLollo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+    #SiMerito{
+    	background-color: var(--Evidenziatore);
+    }
+
+    #studiareNonBasta{
+        width: 450px;
+        height: 253px;
+    }
+}
+
+@media only screen and (max-width: 578px){
+    #fotoFasa, #fotoLollo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+    header .azzScuro{
+        font-size: 70px;
+    }
+    header .azzChiaro{
+        font-size: 60px;
+    }
+    header>h1{
+        margin-bottom: 30px;
+    }
+    
+    #SiMerito{
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 462px){
+    #studiareNonBasta{
+        width: 350px;
+        height: 197px;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --varAzzChiaro: #4585E6;
+        --varAzzScuro: #005AE0;
+        --sfondoPagina: #35363A;
+        --testo: white;
+        --SfondoIntestazione: #cfe2ff;
+        --Evidenziatore: rgba(48, 210, 254, 0.5);
+    }
+
+    header .azzScuro{
+        color: white;
+    }
+}
